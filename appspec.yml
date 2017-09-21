@@ -1,13 +1,10 @@
 version: 0.0
 os: linux
 files:
-  - source: ./
-    destination: /var/www/html/testlink-code
+  - source: /
+    destination: /var/www/html/
 hooks:
   BeforeInstall:
-    - location: scripts/setup.sh
-    timeout: 600
-    runas: root
     - location: scripts/install_dependencies.sh
     timeout: 600
     runas: root
